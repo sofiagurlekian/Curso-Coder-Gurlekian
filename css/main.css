@@ -318,6 +318,11 @@ nav li{
    .etiqueta{
     font-size: 15px !important;
    }
+
+   .form-button{
+    background-color:white !important;
+    border:1px solid gray !important;
+    }
 }
 
 /* Vista Tablet */
@@ -355,7 +360,12 @@ nav li{
 
     .etiqueta{
         font-size: 18px !important;
-       }
+    }
+
+    .form-button{
+     background-color:white !important;
+    border:1px solid gray !important;
+    }
 
 }
 
