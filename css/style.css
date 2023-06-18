@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Vista Desktop */
 /* Inicio */
 html body {
   font-family: Arial, Helvetica, sans-serif !important;
@@ -45,10 +46,6 @@ article p {
   background-color: white;
 }
 
-a {
-  color: rgb(104, 100, 104) !important;
-}
-
 .dark-violet {
   color: rgb(72, 6, 72);
 }
@@ -81,10 +78,6 @@ textarea:focus {
   background-color: rgb(232, 221, 205);
 }
 
-a:hover {
-  cursor: pointer;
-}
-
 /* Productos/TablaTalles */
 table {
   width: 5%;
@@ -103,10 +96,13 @@ nav li {
   justify-content: center;
   padding: 5px;
 }
+nav li a {
+  color: rgb(104, 100, 104) !important;
+}
+nav li a:hover {
+  cursor: pointer;
+}
 
-/* a:visited{
-    color: violet;
-} */
 .submenu {
   text-align: center;
   font-size: x-large;
@@ -179,8 +175,9 @@ nav li {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-/* Vista Mobile Index y Productos*/
+/* Vista Mobile*/
 @media (max-width: 480px) {
+  /*Inicio*/
   #top {
     display: flex;
     justify-content: center;
@@ -222,7 +219,7 @@ nav li {
     right: 0px;
     width: 80px;
   }
-  article h3 {
+  article h2 {
     color: rgb(85, 81, 85);
     background-color: gainsboro;
     text-decoration: underline;
@@ -232,6 +229,7 @@ nav li {
   p {
     font-size: medium;
   }
+  /* Productos*/
   .submenu {
     font-size: medium;
   }
@@ -279,6 +277,7 @@ nav li {
   #video {
     padding: 0px;
   }
+  /* Nuestro local*/
   iframe {
     width: 300px;
     height: 200px;
@@ -288,6 +287,7 @@ nav li {
     justify-content: center !important;
     align-items: center;
   }
+  /* Form */
   .etiqueta {
     font-size: 15px !important;
   }

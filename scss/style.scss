@@ -1,14 +1,22 @@
+@import"colors.scss";
+
+@import "fonts.scss";
+
+@import "image-sizes.scss";
+
+
+/* Vista Desktop */
 /* Inicio */
 
 html{
-    body {font-family: Arial, Helvetica, sans-serif !important; font-size: 20px; 
+    body {font-family: $primary-font !important; font-size: 20px; 
     background-color: whitesmoke!important;}
 }
 
 /* Estilos Inicio - Imagen principal, Redes, Horarios de atención */
 
 article {
-   h2{ color: rgb(85, 81, 85); background-color:gainsboro; text-decoration: underline; text-align: center; padding:30px; margin:30px;}  
+   h2{ color: $titles-color; background-color:gainsboro; text-decoration: underline; text-align: center; padding:30px; margin:30px;}  
     p{ color: darkgray; text-align: center;}
     
 }
@@ -16,7 +24,7 @@ article {
 #shop {
     padding: 50px 20px 30px 60px;
     margin: 70px;
-    width: 700px; height: 720px;
+    width: $image-width; height: $image-height;
 }
 
 .menu {
@@ -33,10 +41,6 @@ article {
     border: solid 1px black;
     padding: 10px;
     background-color:white;
-}
-
-a {
-    color: rgb(104, 100, 104) !important;
 }
 
 
@@ -67,15 +71,11 @@ form{
 }
 
 input:focus{
-    background-color: rgb(232, 221, 205);
+    background-color: $background-focus;
 }
 
 textarea:focus{
-    background-color: rgb(232, 221, 205);
-}
-
-a:hover{
-    cursor:pointer;
+    background-color: $background-focus;
 }
 
 
@@ -92,12 +92,15 @@ table{
 }
 
 nav{
-    li{display: inline-block; margin-right: 35px; justify-content: center; padding:5px;}
+    li{
+        display: inline-block; margin-right: 35px; justify-content: center; padding:5px;
+        a {
+        color: $color-menu !important;
+        &:hover { cursor: pointer;}
+        // &:visited {color:violet;}
+        }
+    }
 }
-
-/* a:visited{
-    color: violet;
-} */
 
 .submenu{
     text-align: center;  
@@ -107,7 +110,7 @@ nav{
 
 // Productos
 .product-image{
-    width: 250px; height: 250px;
+    width: calc($image-width/2)-100; height: calc($image-width/2)-100;
 }
 
 .grid-container-products{
@@ -173,11 +176,12 @@ nav{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-/* Vista Mobile Index y Productos*/
+/* Vista Mobile*/
 
 @media (max-width:480px){
     
+    /*Inicio*/
+
     #top{
         display: flex;
         justify-content: center;
@@ -211,7 +215,7 @@ nav{
 
 
     #shop{
-        width: 250px; height: 250px;
+        width: calc($image-width/2)-100; height: calc($image-width/2)-100;
         margin: 0px;
         padding: 10px;
     }
@@ -229,13 +233,14 @@ nav{
 
 
     article {
-        h3{color: rgb(85, 81, 85); background-color:gainsboro; text-decoration: underline; text-align: center; font-size: medium;}
+        h2{color: $titles-color; background-color:gainsboro; text-decoration: underline; text-align: center; font-size: medium;}
     }
 
     p{
         font-size: medium;
     }
 
+    /* Productos*/
 
     .submenu{
         font-size: medium;
@@ -246,7 +251,7 @@ nav{
     }
 
     .product-image{
-        width: 200px; height: 200px;
+        width: calc($image-width/2)-150; height: calc($image-width/2)-150;
     }
     
     .grid-container-products{
@@ -294,6 +299,7 @@ nav{
     padding:0px;
    }
 
+   /* Nuestro local*/
    iframe{
     width: 300px;
     height:200px;
@@ -305,6 +311,7 @@ nav{
     align-items: center;
    }
 
+   /* Form */
    .etiqueta{
     font-size: 15px !important;
    }
@@ -335,7 +342,7 @@ nav{
     }
 
     .product-image{
-        width: 250px; height: 250px;
+        width: calc($image-width - 450px); height: calc($image-width - 450px);
     }
 
     .grid-container-products{
