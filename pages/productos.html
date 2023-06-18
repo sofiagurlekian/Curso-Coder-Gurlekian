@@ -11,36 +11,60 @@
 <body>
     
     <!-- Logo -->
-    <header class="cabecera">
-        <div id="top">
-            <img  src="../media/INBA-LOGO.jpg" alt="logo sitio">
-        </div>
+<header class="cabecera">
+    <div id="top">
+        <img  src="../media/INBA-LOGO.jpg" alt="logo sitio">
+    </div>
     
-    </header>
-
     <!-- Menu -->
-    <nav>
-        <ul class="menu">
-            <li><a href="../index.html">Volver al inicio</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
-            <li><a href="./nuestro-local.html">Nuestro local</a></li>
-            <li><a href="../index.html#horarios-de-atencion">Horario de atención</a></li><br>
-        </ul>
-    </nav>
-    <!-- Barra de selección de Productos -->
-    <nav>
-        <ul class="submenu">
-            <li><i><b><u>Productos</u></b></i></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="../index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Inicio
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../index.html#horarios-de-atencion">Horarios de Atención</a></li>
+                            <li><a class="dropdown-item" href="../index.html#pie-de-pagina">Cambios y devoluciones</a></li>
+                            <li><a class="dropdown-item" href="../index.html">Volver al Inicio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nuestro-local.html">Nuestro Local</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+     </nav>
+</header>
 
-        <ul class="opciones-de-productos">
-            <li>Ver todos</li>
-            <li>Top</li>
-            <li>Bottom</li>
-            <li>Sandals and snickers</li>
-            <li>Caps</li>
-        </ul>
-    </nav>
+<nav class="submenu" class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Productos
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Ver todos</a></li>
+      <li><a class="dropdown-item" href="#">Top</a></li>
+      <li><a class="dropdown-item" href="#">Bottom</a></li>
+      <li><a class="dropdown-item" href="#">Snickers and Sandals</a></li>
+      <li><a class="dropdown-item" href="#">Caps</a></li>
+    </ul>
+  </li>
+</nav>
+
     <!-- Productos Imágenes -->
     <!-- GRIDS -->
 

@@ -9,38 +9,64 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-        <!-- Logo -->
-        <header class="cabecera">
-            <div id="top">
-                <img  src="../media/INBA-LOGO.jpg" alt="logo sitio">
+ <!-- Logo -->
+<header class="cabecera">
+    <div id="top">
+        <img  src="../media/INBA-LOGO.jpg" alt="logo sitio">
+    </div>
+    <!-- Menu -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="../index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Inicio
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="../index.html#horarios-de-atencion">Horarios de Atención</a></li>
+                                <li><a class="dropdown-item" href="../index.html#pie-de-pagina">Cambios y devoluciones</a></li>
+                                <li><a class="dropdown-item" href="../index.html">Volver al Inicio</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Buscar">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
+                </div>
             </div>
-        <!-- Menu -->
-            <nav>
-                <ul class="menu">
-                    <li><a href="../index.html">Volver al inicio</a></li>
-                    <li><a href="./contacto.html">Contacto</a></li>
-                    <li><a href="./productos.html">Productos</a></li>
-                    <li><a href="../index.html#horarios-de-atencion">Horario de atención</a></li><br>
-                </ul>
-            </nav> 
+         </nav>
 
-            <nav>
-                <ul class="submenu">
-                    <li><i><b><u>Nuestro Local</u></b></i></li>
-                </ul>
-            </nav>
-        <!-- Maps -->
-
-            <div class="centrar" id="map"> 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.032590358129!2d-58.462441500000025!3d-34.6286167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca2785957213%3A0xc134bc49f1882683!2sIncomes!5e0!3m2!1ses-419!2sar!4v1682625331669!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div> 
-
-        <!-- Sticky Wpp Icon     -->
+    <!-- Submenu -->
+        <nav>
+            <ul class="submenu">
+                <li><b><u>Te esperamos!</u></b></li>
+            </ul>
+        </nav>
+ </header>
+    <!-- Maps -->
+<main>
+     <div class="centrar" id="map"> 
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.032590358129!2d-58.462441500000025!3d-34.6286167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca2785957213%3A0xc134bc49f1882683!2sIncomes!5e0!3m2!1ses-419!2sar!4v1682625331669!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div> 
+</main>
+    <!-- Sticky Wpp Icon     -->
             <div>
                 <img id="iconowpp"src="../media/whatsapp-icon.png" alt="whatsapp">
             </div> 
 
-        <footer>
+<footer>
             <nav>
                 <ul class="menu" id="pie-de-pagina">
                     <li><a href=./cambiosydevoluciones.html>Cambios y devoluciones</a></li> 
