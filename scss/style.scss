@@ -36,13 +36,21 @@ article {
     align-items: center;
 }
 
-.submenu{
-    display:flex !important;
-    justify-content: center !important;  
-    font-size: x-large !important; 
-    color: #606060;
+.submenu{   
+    display: flex !important;
+    justify-content: center !important;
     margin:10px;
-    padding:50px,
+    padding:50px;
+}
+
+.display-6{
+    text-align: center !important;
+    border: solid 2px;
+    border-radius: 20px;
+    margin: 50px;
+    background-color: #565e64;
+    color: azure;
+    
 }
 
 #top{
@@ -243,8 +251,12 @@ nav{
     /* Productos*/
 
     .submenu{
-        font-size: small;
-        text-align: center ;
+        margin: 20px !important;
+        padding:60px !important;
+    }
+
+    .display-6{
+        text-align: center !important;
     }
 
     .opciones-de-productos{
