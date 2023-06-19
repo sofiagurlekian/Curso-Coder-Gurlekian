@@ -4,6 +4,7 @@
 
 @import "image-sizes.scss";
 
+@import "mixin.scss";
 
 /* Vista Desktop */
 /* Inicio */
@@ -31,14 +32,11 @@ article {
     list-style-type: none;
 }
 .centrar{
-    display: flex;
-    justify-content: center !important;
-    align-items: center;
+    @include flex-center;
 }
 
 .submenu{   
-    display: flex !important;
-    justify-content: center !important;
+    @include flex-center;
     margin:10px;
     padding:50px;
 }
@@ -48,7 +46,7 @@ article {
     border: solid 2px;
     border-radius: 20px;
     margin: 50px;
-    background-color: #565e64;
+    background-color: $submenu-background;
     color: azure;
     
 }
@@ -65,8 +63,7 @@ article {
 }
 
 #video{
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     padding: 30px;
 }
 
@@ -91,7 +88,7 @@ input:focus{
 }
 
 textarea:focus{
-    background-color: $background-focus;
+    @extend input, :focus´ !optional;
 }
 
 
@@ -103,8 +100,7 @@ table{
 }
 
 .tabla{
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 }
 
 nav{
@@ -135,10 +131,10 @@ nav{
 
 
 .grid-item-product{
-    display: flex;
+    @include flex-center;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    
 }
 
 .product-name {
@@ -148,9 +144,8 @@ nav{
 }
 
 .product-price{
-    padding: 5px 10px;
-    text-align:center;
-    font-style: italic;
+    @extend .product-name;
+    
 }
 
 .grid-container-text{
@@ -168,8 +163,7 @@ nav{
 
 #pie-de-pagina{
     margin-top: 50px; border-bottom: none;
-    display: flex;
-    justify-content: center;
+    @include flex-center;
 }
 
 #iconowpp{
@@ -191,8 +185,7 @@ nav{
     /*Inicio*/
 
     #top{
-        display: flex;
-        justify-content: center;
+        @include flex-center;
         padding: 25px 100px;
     }
 
@@ -279,10 +272,10 @@ nav{
     
     
     .grid-item-product{
-        display: flex;
+        @include flex-center;
         flex-direction: column;
         align-items: center;
-        justify-content:center;
+        
     }
     
     .product-name {
@@ -292,9 +285,7 @@ nav{
     }
     
     .product-price{
-        padding: 5px 10px;
-        text-align:center;
-        font-style: italic;
+        @extend .product-name;
     }
 
 
@@ -303,8 +294,7 @@ nav{
    }
 
    .tabla{
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     font-size: small;
    }
 
@@ -319,8 +309,7 @@ nav{
    }
 
    #map{
-    display: flex;
-    justify-content: center !important;
+    @include flex-center;
     align-items: center;
    }
 
@@ -339,10 +328,9 @@ nav{
 @media (min-width:480px) and (max-width:1200px){
 
     .grid-item-product{
-        display: flex;
+        @include flex-center;
         flex-direction: column;
         align-items: center;
-        justify-content:center;
         padding:40px;
     }
 
