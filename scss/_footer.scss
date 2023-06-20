@@ -1,0 +1,22 @@
+#pie-de-pagina{
+    margin-top: 50px; border-bottom: none;
+    @include flex-center;
+}
+
+
+.back-to-top{
+    width: 100px;
+    height: 70px;
+    background-color: gainsboro;
+    position: relative;
+    left:10px;
+    bottom:10px;
+    text-align: center;
+    transform: skew(-5deg,-2deg);
+
+
+    .boton-back{
+    color: $titles-color !important;
+    font-size: 20px !important;
+    }
+}

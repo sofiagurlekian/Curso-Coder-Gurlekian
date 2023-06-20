@@ -1,0 +1,201 @@
+// /* Vista Mobile*/
+
+@media (max-width:480px){
+    
+    /* Header*/
+    #top{
+        @include flex-center;
+        padding: 25px 100px;
+    }
+
+    nav {
+        li{ display: block;
+         margin-right: 35px; 
+         justify-content: center;
+         padding: 5px;
+        }
+    }
+    
+    /*Main Inicio*/
+    article{
+        
+        .centrar{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+
+            audio{
+                display: none;
+            }
+            
+        }
+
+        h2{color: $titles-color; background-color:gainsboro; text-decoration: underline; text-align: center; font-size: medium;}
+        
+
+        p{
+        font-size: medium;
+        }
+
+        #video{
+            padding:0px;
+           }
+    }
+
+
+    /*Footer*/
+    #pie-de-pagina{
+           text-align: center;
+           font-size: 15px;
+    }
+
+    .back-to-top{
+        width: 70px;
+        height: 60px;
+        background-color: gainsboro;
+        position: relative;
+        left:5px;
+        bottom: 10px;
+        font-size: small bold;
+        color: white !important;
+        text-align: center;
+        transform: skew(-5deg,-2deg);
+        
+        .boton-back{
+        color: $titles-color !important;
+        font-size: 15px !important;
+        }
+    }
+
+    /*Icono Wpp*/
+    #iconowpp{
+           position:fixed;
+            bottom:0px;
+            right:0px;
+            width:80px;
+    } 
+
+    /* Productos*/
+
+    .submenu{
+        margin: 20px !important;
+        padding:60px !important;
+    }
+
+    .grid-container-products{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        width:100%;
+        grid-template-rows: repeat(6,1fr);
+        gap: 40px;
+        margin-bottom:50px;
+
+        .grid-item-product{
+            @include flex-center;
+            flex-direction: column;
+            align-items: center;
+            
+            .product-image{
+                width: calc($image-width/2)-150; height: calc($image-width/2)-150;
+            }
+
+            .product-name {
+                padding: 5px 10px;
+                text-align:center;
+                font-style: italic;
+            }
+            
+            .product-price{
+                padding: 5px 10px;
+                text-align:center;
+                font-style: italic;
+            }
+        
+
+        }
+
+    } 
+
+    .tabla{
+        @include flex-center;
+        font-size: 13px;
+       }
+
+    
+   /* Nuestro local*/
+   .display-6{
+    text-align: center !important;
+    }
+
+    #map{
+        @include flex-center;
+        align-items: center;
+
+        iframe{
+            width: 300px;
+            height:200px;
+           }
+
+       }
+
+   /* Form -contacto */
+   .etiqueta{
+    font-size: 15px !important;
+   }
+
+   .boton-enviar{
+    background-color:white !important;
+    border:1px solid gray !important;
+    }
+
+}
+
+/* Vista Tablet */
+@media (min-width:480px) and (max-width:1200px){
+
+
+    #shop{
+        width: calc($image-width/2)+100px; height: calc($image-width/2)+100px;
+        margin: 20px;
+        padding: 30px 10px 10px 30px;
+        transition: height 1s, width 2s, background 2s;
+        &:hover{
+            width: calc($image-width/2)+150px; height: calc($image-width/2)+150px;
+            margin: 30px;
+            padding: 40px 20px 20px 40px;
+        }
+    }
+    
+    .submenu{
+        font-size: large;
+    }
+
+    .grid-container-products{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+        width:100%;
+        grid-template-rows: repeat(3,1fr);
+        gap: 40px;
+        margin-bottom:50px;
+
+        .grid-item-product{
+            @include flex-center;
+            flex-direction: column;
+            align-items: center;
+            padding:40px;
+        }
+
+        .product-image{
+            width: calc($image-width - 450px); height: calc($image-width - 450px);
+        }
+    } 
+
+    .boton-enviar{
+     background-color:white !important;
+    border:1px solid gray !important;
+    }
+
+}

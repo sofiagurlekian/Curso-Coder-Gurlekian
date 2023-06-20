@@ -1,0 +1,32 @@
+/*Desktop Imagen Local Transicion*/
+
+#shop {
+    padding: 50px 30px 30px 50px;
+    margin: 50px;
+    width: $image-width; height: $image-height;
+    transition: height 1s, width 2s, background 2s;
+    &:hover{
+    padding: 50px 30px 30px 50px;
+    margin: 100px;
+    width: 900px; height: 920px;
+    border: solid 5px rgba(105, 102, 99, 0.816);
+    background: linear-gradient(rgb(103, 101, 103),rgb(147, 68, 71));
+    }
+}
+
+/*Mobile Imagen Local Transicion*/
+@media (max-width:480px){
+    #shop{
+        width: calc($image-width/2)-100; height: calc($image-width/2)-100;
+        margin: 0px;
+        padding: 10px;
+        transition: height 1s, width 2s, background 2s;
+        &:hover{
+            width: calc($image-width/2)-50; height: calc($image-width/2)-50;
+            margin: 0px;
+            padding: 10px;
+        }
+    }
+}
+
+

@@ -1,0 +1,13 @@
+
+
+article {
+    h2{ color: $titles-color; background-color:gainsboro ; text-decoration: underline; text-align: center; padding:20px; margin:20px;}  
+     p{ color: darkgray; text-align: center;}
+ 
+
+
+    #video{
+        @include flex-center;
+        padding: 30px;
+    }
+}

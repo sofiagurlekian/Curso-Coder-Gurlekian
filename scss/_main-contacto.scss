@@ -1,0 +1,26 @@
+
+.formulario{
+     display: block;
+    text-align: center;
+        
+    .etiqueta{
+        font-size: 25px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    input:focus{
+        background-color: $background-focus;
+    }
+        
+    textarea:focus{
+        @extend input, :focus´ !optional;
+    }
+
+    .form-button:hover{
+        background-color:white;
+        cursor: pointer;
+        border:1px solid gray;
+    }
+}
+
+

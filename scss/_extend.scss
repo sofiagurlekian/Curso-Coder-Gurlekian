@@ -1,0 +1,21 @@
+//Grid Productos
+
+.product-name {
+    padding: 5px 10px;
+    text-align:center;
+    font-style: italic;
+}
+
+.product-price{
+    @extend .product-name;
+    
+}
+
+//Contacto Form
+input:focus{
+    background-color: $background-focus;
+}
+    
+textarea:focus{
+    @extend input, :focus´ !optional;
+}

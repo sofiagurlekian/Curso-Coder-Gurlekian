@@ -1,0 +1,20 @@
+.centrar{
+    @include flex-center;
+}
+
+#top{
+    border: solid 1px black;
+    padding: 10px;
+    background-color: white;
+}
+
+nav{
+    li{
+        display: inline-block; margin-right: 35px; justify-content: center; padding:5px;
+        a {
+        color: $color-menu !important;
+        &:hover { cursor: pointer;}
+        // &:visited {color:violet;}
+        }
+    }
+}

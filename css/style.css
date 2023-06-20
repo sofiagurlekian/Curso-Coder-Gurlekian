@@ -1,5 +1,25 @@
 @charset "UTF-8";
+.product-name, .grid-container-products .grid-item-product .product-price, .product-price {
+  padding: 5px 10px;
+  text-align: center;
+  font-style: italic;
+}
+
+input:focus, .formulario textarea:focus, textarea:focus {
+  background-color: rgb(232, 221, 205);
+}
+
 /*Vista Desktop y Tablet Logo Animacion*/
+.logo {
+  width: 200px;
+  height: 80px;
+  animation-name: un_efecto;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
 @keyframes un_efecto {
   0% {
     width: 200px;
@@ -24,6 +44,15 @@
 }
 /*Vista Mobile Logo Animación*/
 @media (max-width: 480px) {
+  .logo {
+    width: 125px;
+    height: 60px;
+    animation-name: un_efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 5s;
+    animation-delay: 1s;
+  }
   @keyframes un_efecto {
     0% {
       width: 125px;
@@ -44,38 +73,7 @@
     }
   }
 }
-/* Vista Desktop */
-/* Inicio */
-html body {
-  font-family: Arial, Helvetica, sans-serif !important;
-  font-size: 20px;
-  background-color: whitesmoke;
-}
-
-.logo {
-  width: 200px;
-  height: 80px;
-  animation-name: un_efecto;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  animation-duration: 5s;
-  animation-delay: 1s;
-}
-
-/* Estilos Inicio - Imagen principal, Redes, Horarios de atención */
-article h2 {
-  color: rgb(85, 81, 85);
-  background-color: gainsboro;
-  text-decoration: underline;
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-}
-article p {
-  color: darkgray;
-  text-align: center;
-}
-
+/*Desktop Imagen Local Transicion*/
 #shop {
   padding: 50px 30px 30px 50px;
   margin: 50px;
@@ -83,7 +81,6 @@ article p {
   height: 720px;
   transition: height 1s, width 2s, background 2s;
 }
-
 #shop:hover {
   padding: 50px 30px 30px 50px;
   margin: 100px;
@@ -93,17 +90,33 @@ article p {
   background: linear-gradient(rgb(103, 101, 103), rgb(147, 68, 71));
 }
 
-.menu {
-  list-style-type: none;
+/*Mobile Imagen Local Transicion*/
+@media (max-width: 480px) {
+  #shop {
+    width: 250px;
+    height: 250px;
+    margin: 0px;
+    padding: 10px;
+    transition: height 1s, width 2s, background 2s;
+  }
+  #shop:hover {
+    width: 300px;
+    height: 300px;
+    margin: 0px;
+    padding: 10px;
+  }
+}
+html body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 20px !important;
+  background-color: whitesmoke;
 }
 
-.display-6 {
-  text-align: center !important;
-  border: solid 2px;
-  border-radius: 20px;
-  margin: 50px;
-  background-color: #565e64;
-  color: azure;
+#iconowpp {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 150px;
 }
 
 .centrar {
@@ -117,40 +130,6 @@ article p {
   background-color: white;
 }
 
-.dark-violet {
-  color: rgb(72, 6, 72);
-}
-
-#video {
-  display: flex !important;
-  justify-content: center !important;
-  padding: 30px;
-}
-
-form {
-  text-align: center;
-}
-
-.formulario {
-  display: block;
-}
-
-.form-button:hover {
-  background-color: white;
-  cursor: pointer;
-  border: 1px solid gray;
-}
-
-input:focus, textarea:focus {
-  background-color: rgb(232, 221, 205);
-}
-
-/* Productos/TablaTalles */
-.tabla {
-  display: flex !important;
-  justify-content: center !important;
-}
-
 nav li {
   display: inline-block;
   margin-right: 35px;
@@ -162,51 +141,6 @@ nav li a {
 }
 nav li a:hover {
   cursor: pointer;
-}
-
-.submenu {
-  display: flex !important;
-  justify-content: center !important;
-  margin: 10px;
-  padding: 50px;
-}
-
-.product-image {
-  width: 250px;
-  height: 250px;
-}
-
-.grid-container-products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  width: 100%;
-  grid-template-rows: repeat(2, 1fr);
-  gap: 40px;
-}
-
-.grid-item-product {
-  display: flex !important;
-  justify-content: center !important;
-  flex-direction: column;
-  align-items: center;
-}
-
-.product-name, .product-price {
-  padding: 5px 10px;
-  text-align: center;
-  font-style: italic;
-}
-
-.grid-container-text {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.grid-item-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #pie-de-pagina {
@@ -226,46 +160,100 @@ nav li a:hover {
   text-align: center;
   transform: skew(-5deg, -2deg);
 }
-
-.boton-back {
+.back-to-top .boton-back {
   color: rgb(85, 81, 85) !important;
   font-size: 20px !important;
 }
 
-#iconowpp {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  width: 150px;
+article h2 {
+  color: rgb(85, 81, 85);
+  background-color: gainsboro;
+  text-decoration: underline;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
+article p {
+  color: darkgray;
+  text-align: center;
+}
+article #video {
+  display: flex !important;
+  justify-content: center !important;
+  padding: 30px;
 }
 
-.etiqueta {
-  font-size: 25px !important;
+.submenu {
+  display: flex !important;
+  justify-content: center !important;
+  margin: 10px;
+  padding: 50px;
+}
+
+.grid-container-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  width: 100%;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+}
+.grid-container-products .grid-item-product {
+  display: flex !important;
+  justify-content: center !important;
+  flex-direction: column;
+  align-items: center;
+}
+.grid-container-products .grid-item-product .product-image {
+  width: 250px;
+  height: 250px;
+}
+.grid-container-products .grid-item-product .product-name, .grid-container-products .grid-item-product .product-price {
+  padding: 5px 10px;
+  text-align: center;
+  font-style: italic;
+}
+.tabla {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.display-6 {
+  text-align: center !important;
+  border: solid 2px;
+  border-radius: 20px;
+  margin: 50px;
+  background-color: #565e64;
+  color: azure;
+}
+
+.formulario {
+  display: block;
+  text-align: center;
+}
+.formulario .etiqueta {
+  font-size: 25px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.formulario input:focus, .formulario textarea:focus {
+  background-color: rgb(232, 221, 205);
+}
+.formulario .form-button:hover {
+  background-color: white;
+  cursor: pointer;
+  border: 1px solid gray;
+}
 
-/* Vista Mobile*/
+.dark-violet {
+  color: rgb(72, 6, 72);
+}
+
 @media (max-width: 480px) {
-  /*Inicio*/
-  .logo {
-    width: 125px;
-    height: 60px;
-    animation-name: un_efecto;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-duration: 5s;
-    animation-delay: 1s;
-  }
+  /* Header*/
   #top {
     display: flex !important;
     justify-content: center !important;
     padding: 25px 100px;
-  }
-  .menu {
-    list-style-type: none;
-    text-align: left;
-    border-bottom: none;
-    font-size: medium;
   }
   nav li {
     display: block;
@@ -273,30 +261,33 @@ nav li a:hover {
     justify-content: center;
     padding: 5px;
   }
-  .centrar {
+  /*Main Inicio*/
+  article .centrar {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
   }
-  audio {
+  article .centrar audio {
     display: none;
   }
-  #shop {
-    width: 250px;
-    height: 250px;
-    margin: 0px;
-    padding: 10px;
-    transition: height 1s, width 2s, background 2s;
+  article h2 {
+    color: rgb(85, 81, 85);
+    background-color: gainsboro;
+    text-decoration: underline;
+    text-align: center;
+    font-size: medium;
   }
-  #shop:hover {
-    width: 300px;
-    height: 300px;
-    margin: 0px;
-    padding: 10px;
+  article p {
+    font-size: medium;
   }
+  article #video {
+    padding: 0px;
+  }
+  /*Footer*/
   #pie-de-pagina {
     text-align: center;
+    font-size: 15px;
   }
   .back-to-top {
     width: 70px;
@@ -310,40 +301,21 @@ nav li a:hover {
     text-align: center;
     transform: skew(-5deg, -2deg);
   }
-  .boton-back {
+  .back-to-top .boton-back {
     color: rgb(85, 81, 85) !important;
     font-size: 15px !important;
   }
+  /*Icono Wpp*/
   #iconowpp {
     position: fixed;
     bottom: 0px;
     right: 0px;
     width: 80px;
   }
-  article h2 {
-    color: rgb(85, 81, 85);
-    background-color: gainsboro;
-    text-decoration: underline;
-    text-align: center;
-    font-size: medium;
-  }
-  p {
-    font-size: medium;
-  }
   /* Productos*/
   .submenu {
     margin: 20px !important;
     padding: 60px !important;
-  }
-  .display-6 {
-    text-align: center !important;
-  }
-  .opciones-de-productos {
-    font-size: small;
-  }
-  .product-image {
-    width: 200px;
-    height: 200px;
   }
   .grid-container-products {
     display: grid;
@@ -354,40 +326,45 @@ nav li a:hover {
     gap: 40px;
     margin-bottom: 50px;
   }
-  .grid-item-product {
+  .grid-container-products .grid-item-product {
     display: flex !important;
     justify-content: center !important;
     flex-direction: column;
     align-items: center;
   }
-  .product-name, .product-price {
+  .grid-container-products .grid-item-product .product-image {
+    width: 200px;
+    height: 200px;
+  }
+  .grid-container-products .grid-item-product .product-name, .grid-container-products .grid-item-product .product-price {
     padding: 5px 10px;
     text-align: center;
     font-style: italic;
   }
-  table {
-    margin-left: 15%;
-    margin-right: 15%;
+  .grid-container-products .grid-item-product .product-price {
+    padding: 5px 10px;
+    text-align: center;
+    font-style: italic;
   }
   .tabla {
     display: flex !important;
     justify-content: center !important;
     font-size: 13px;
   }
-  #video {
-    padding: 0px;
-  }
   /* Nuestro local*/
-  iframe {
-    width: 300px;
-    height: 200px;
+  .display-6 {
+    text-align: center !important;
   }
   #map {
     display: flex !important;
     justify-content: center !important;
     align-items: center;
   }
-  /* Form */
+  #map iframe {
+    width: 300px;
+    height: 200px;
+  }
+  /* Form -contacto */
   .etiqueta {
     font-size: 15px !important;
   }
@@ -411,22 +388,8 @@ nav li a:hover {
     margin: 30px;
     padding: 40px 20px 20px 40px;
   }
-  .grid-item-product {
-    display: flex !important;
-    justify-content: center !important;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-  }
   .submenu {
     font-size: large;
-  }
-  .opciones-de-productos {
-    font-size: medium;
-  }
-  .product-image {
-    width: 250px;
-    height: 250px;
   }
   .grid-container-products {
     display: grid;
@@ -437,8 +400,16 @@ nav li a:hover {
     gap: 40px;
     margin-bottom: 50px;
   }
-  .etiqueta {
-    font-size: 18px !important;
+  .grid-container-products .grid-item-product {
+    display: flex !important;
+    justify-content: center !important;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+  }
+  .grid-container-products .product-image {
+    width: 250px;
+    height: 250px;
   }
   .boton-enviar {
     background-color: white !important;
