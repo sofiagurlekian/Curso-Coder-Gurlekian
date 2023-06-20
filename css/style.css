@@ -1,10 +1,12 @@
 @charset "UTF-8";
+/*Extend en Grid Productos*/
 .product-name, .grid-container-products .grid-item-product .product-price, .product-price {
   padding: 5px 10px;
   text-align: center;
   font-style: italic;
 }
 
+/*Extend en Contacto Form*/
 input:focus, .formulario textarea:focus, textarea:focus {
   background-color: rgb(232, 221, 205);
 }
@@ -106,6 +108,7 @@ input:focus, .formulario textarea:focus, textarea:focus {
     padding: 10px;
   }
 }
+/*Estructura gral. de los HTML, e Sticky Icon Wpp*/
 html body {
   font-family: Arial, Helvetica, sans-serif !important;
   font-size: 20px !important;
@@ -119,6 +122,7 @@ html body {
   width: 150px;
 }
 
+/*Header*/
 .centrar {
   display: flex !important;
   justify-content: center !important;
@@ -143,6 +147,7 @@ nav li a:hover {
   cursor: pointer;
 }
 
+/*Footer*/
 #pie-de-pagina {
   margin-top: 50px;
   border-bottom: none;
@@ -165,6 +170,7 @@ nav li a:hover {
   font-size: 20px !important;
 }
 
+/* Main - Inicio*/
 article h2 {
   color: rgb(85, 81, 85);
   background-color: gainsboro;
@@ -183,6 +189,7 @@ article #video {
   padding: 30px;
 }
 
+/* Main - Productos*/
 .submenu {
   display: flex !important;
   justify-content: center !important;
@@ -218,6 +225,7 @@ article #video {
   justify-content: center !important;
 }
 
+/* Main - Nuestro local*/
 .display-6 {
   text-align: center !important;
   border: solid 2px;
@@ -230,6 +238,7 @@ article #video {
 .formulario {
   display: block;
   text-align: center;
+  /* Main - Contacto*/
 }
 .formulario .etiqueta {
   font-size: 25px;
@@ -244,10 +253,12 @@ article #video {
   border: 1px solid gray;
 }
 
+/* Main - Cambios y Devoluciones*/
 .dark-violet {
   color: rgb(72, 6, 72);
 }
 
+/* Vista Mobile - Mediaqueries*/
 @media (max-width: 480px) {
   /* Header*/
   #top {
@@ -373,7 +384,7 @@ article #video {
     border: 1px solid gray !important;
   }
 }
-/* Vista Tablet */
+/* Vista Tablet Mediaqueries*/
 @media (min-width: 480px) and (max-width: 1200px) {
   #shop {
     width: 450px;
