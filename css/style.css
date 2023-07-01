@@ -146,6 +146,9 @@ nav li a {
 nav li a:hover {
   cursor: pointer;
 }
+nav div .carrito {
+  padding: 15px !important;
+}
 
 /*Footer*/
 #pie-de-pagina {
@@ -271,6 +274,10 @@ article #video {
     margin-right: 35px;
     justify-content: center;
     padding: 5px;
+  }
+  nav div .carrito {
+    display: flex;
+    justify-content: flex-end !important;
   }
   /*Main Inicio*/
   article .centrar {
