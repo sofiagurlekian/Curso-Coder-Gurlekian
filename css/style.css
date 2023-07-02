@@ -146,6 +146,9 @@ nav li a {
 nav li a:hover {
   cursor: pointer;
 }
+nav .boton-buscar {
+  color: gray !important;
+}
 nav div .carrito {
   padding: 15px !important;
 }
@@ -259,6 +262,12 @@ article #video {
 /* Main - Cambios y Devoluciones*/
 .dark-violet {
   color: rgb(72, 6, 72);
+}
+
+/*Error 404*/
+.error {
+  display: flex !important;
+  justify-content: center !important;
 }
 
 /* Vista Mobile - Mediaqueries*/
